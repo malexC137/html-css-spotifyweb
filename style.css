@@ -26,15 +26,6 @@ li {
     height: calc(100vh - 80px);
 }
 
-.container-bot {
-    height: 80px;
-    background-color: red;
-    position: fixed;
-    bottom: 0%;
-    display: flex;;
-    justify-content: space-between;
-}
-
 .container::after {
     content: '';
     display: table;
@@ -145,18 +136,123 @@ li {
                            /*  */
 /* //////////////////// PLAY BAR START ////////////////////// */
 
+.container-bot {
+    height: 80px;
+    background-color: rgb(40, 40, 40);
+    position: fixed;
+    bottom: 0%;
+    display: flex;;
+    justify-content: space-between;
+}
+
 .bottom-bar-sides {
     width: 15vw;
     height: 100%;
-    background-color: chartreuse;
 }
 
 .bottom-bar-center {
     width: 40vw;
     height: 100%;
-    background-color: cyan;
     margin: auto;
 }
+
+
+.bottom-bar-left img {
+    width: 40px;
+    float: left;
+    margin: 20px 10px 20px 10px;
+}
+
+.box-bot-left-left {
+    float: left;
+    margin-top: 25px;
+}
+
+.box-bot-left-right {
+    float: right;
+    margin-top: 30px;
+}
+
+.fa-left-bot {
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.play-buttons {
+    text-align: center;
+    height: 50px;
+    /* margin: auto; */
+    padding-top: 5px;
+}
+
+.fa-play-circle-o {
+    font-size: 30px;
+}
+
+.fa-buttons-bar {
+    padding: 0 8px 0 8px;
+    vertical-align: middle;
+}
+
+.minutes-play {
+    width: 10%;
+    margin-top: -2px;
+}
+
+.minutes-play-left {
+    float: left;
+}
+
+.reproduction-bar {
+    width: 80%;
+    /* height: 0%; */
+    border: solid 1px rgb(40, 40, 40);
+    background-color: gray;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.played-bar {
+    width: 25%;
+    /* height: 0%; */
+    float: left;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+.minutes-play-right {
+    float: right;
+    text-align: right;
+}
+
+.bot-box-right-left {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.bot-box-right-right {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.volume-bar {
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+.bot-box-right-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
 
 /* //////////////////// PLAY BAR END //////////////////////// */
                           /*  */
