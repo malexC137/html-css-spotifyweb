@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 100vw;
+html {
+    font-family: 'Roboto', sans-serif;
 }
 
-.container-top {
-    height: calc(100vh - 80px);
+li {
+    list-style: none;
+    padding: 4px 0 4px 0;
+}
+
+.container {
+    width: 100vw;
 }
 
 .container-flex {
@@ -17,58 +22,117 @@
     flex-direction: column;
 }
 
+.container-top {
+    height: calc(100vh - 80px);
+}
+
 .container-bot {
     height: 80px;
     background-color: red;
     position: fixed;
     bottom: 0%;
-}
-/* //////////////// PLAYLIST COLUMN START /////////////////// */
-.column-playlist {
-    width: 20vw;
-    height: 100%;
-    background-color: green;
-    float: left;
+    display: flex;;
+    justify-content: space-between;
 }
 
-.column-album {
-    width: 80vw;
-    /* background-color: hotpink; */
+.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.my-h5{
+    padding: 0px 50px;
+}
+
+.my-hr {
+    border: solid 1px;
+    margin: 10px 0 10px 0;
+}
+
+/* //////////////////// STYLES START //////////////////////// */
+
+.bg-black {
+    background-color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gray {
+    color: gray;
+}
+
+.text-padding {
+    padding: 10px 0 10px 0;
+}
+
+/* //////////////////// STYLES END ////////////////////////// */
+                          /*  */
+/* //////////////// PLAYLIST COLUMN START /////////////////// */
+
+.column-playlist {
+    width: 15vw;
     height: 100%;
     float: left;
+    padding-right: 15px;
 }
 
 .logo {
-    /* width: 100%; */
     flex-shrink: 0;
-    height: 60px;
-    background-color: white;
+    height: 80px;
+}
+
+.logo img {
+    width: 80%;
+    padding: 15px;
 }
 
 .list-top {
-    /* width: 100%; */
-    flex-shrink: 0;
-    height: 60px;
-    background-color: yellow;
+    padding: 0 0 10px 15px ;
 }
 
 .list-bot {
     flex-grow: 1;
-    background-color: violet;
     overflow: auto;
-
+    padding-left: 15px;
 }
 
 .install-app {
     flex-shrink: 0;
     height: 60px;
-    background-color: black;
+    padding-left: 15px;
 }
+
+/* //////////////// PLAYLIST COLUMN END ///////////////////// */
+                          /*  */
+/* //////////////////// TOP BAR START /////////////////////// */
 
 .top-bar {
     flex-shrink: 0;
-    height: 60px;
-    background-color: turquoise;
+    height: 80px;
+    background-color: rgb(8, 11, 17);
+    /* padding: 20px 0; */
+}
+
+.top-button {
+    float: right;
+    line-height: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: solid 1px white;
+}
+
+/* //////////////////// TOP BAR END ///////////////////////// */
+                           /*  */
+/* /////////////////// MAIN BODY START ////////////////////// */
+
+.column-album {
+    width: 85vw;
+    /* background-color: hotpink; */
+    height: 100%;
+    float: left;
 }
 
 .album-list {
@@ -76,6 +140,33 @@
     background-color: cadetblue;
     overflow: auto;
 }
+
+/* /////////////////// MAIN BODY END //////////////////////// */
+                           /*  */
+/* //////////////////// PLAY BAR START ////////////////////// */
+
+.bottom-bar-sides {
+    width: 15vw;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+.bottom-bar-center {
+    width: 40vw;
+    height: 100%;
+    background-color: cyan;
+    margin: auto;
+}
+
+/* //////////////////// PLAY BAR END //////////////////////// */
+                          /*  */
+/* ////////////////// MEDIA QUERY START ///////////////////// */
+
+
+
+
+
+/* ////////////////// MEDIA QUERY END /////////////////////// */
 
 
 
