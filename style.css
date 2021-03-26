@@ -132,8 +132,6 @@ li {
 }
 
 .album-list {
-    padding: 15px;
-    flex-grow: 1;
     overflow: auto;
 }
 
@@ -146,39 +144,40 @@ li {
     display: inline;
 }
 
-.box-container-1 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .box > img {
-    width: 150px;
-    /* margin: 10px 10px 15px 0; */
+    max-height: 150px;
 }
 
 .box > h5 {
     padding: 10px 0;
 }
 
-.box {
-    width: 160px;
+
+.box-container-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
 }
 
 .box-1 {
-    /* flex-grow: 1; */
-}
-
-.box-2 {
-    /* flex-grow: 0; */
+    flex-grow: 1;
+    flex-basis: calc(100% / 6);
 }
 
 .box-container-2 {
     display: flex;
     flex-wrap: wrap;
-
-
 }
+
+.box-2 {
+    flex-grow: 1;
+    flex-basis: calc(100% / 6);
+    height: 150px;
+}
+
+
 
 /* /////////////////// MAIN BODY END //////////////////////// */
                            /*  */
