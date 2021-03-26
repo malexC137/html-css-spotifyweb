@@ -146,14 +146,14 @@ li {
     display: inline;
 }
 
-.box-container {
+.box-container-1 {
     display: flex;
     flex-wrap: wrap;
 }
 
 .box > img {
-    width: 140px;
-    margin: 10px 10px 15px 0;
+    width: 150px;
+    /* margin: 10px 10px 15px 0; */
 }
 
 .box > h5 {
@@ -162,6 +162,22 @@ li {
 
 .box {
     width: 160px;
+
+}
+
+.box-1 {
+    /* flex-grow: 1; */
+}
+
+.box-2 {
+    /* flex-grow: 0; */
+}
+
+.box-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+
 }
 
 /* /////////////////// MAIN BODY END //////////////////////// */
