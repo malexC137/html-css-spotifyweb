@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* //////////////////// STYLES START //////////////////////// */
+
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -13,7 +15,7 @@ li {
     padding: 4px 0 4px 0;
 }
 
-a {
+.my-a {
     text-decoration: none;
 }
 
@@ -36,10 +38,6 @@ a {
     clear: both;
 }
 
-.my-h5{
-    padding: 0px 50px;
-}
-
 .my-hr {
     border: solid 1px;
     margin: 10px 0 10px 0;
@@ -48,8 +46,6 @@ a {
 .lefted {
     float: left;
 }
-
-/* //////////////////// STYLES START //////////////////////// */
 
 .bg-black {
     background-color: black;
@@ -78,7 +74,6 @@ a {
 .column-playlist {
     max-width: 200px;
     height: 100%;
-    float: left;
     padding-right: 15px;
 }
 
@@ -90,23 +85,20 @@ a {
 svg {
     width: 20px;
     height: 20px;
-    float: left;
-}
-
-.list-top-ancor:hover {
-    color: white;
 }
 
 .list-top > ul > li > a > h5 {
     padding: 5px 0 0 25px;
 }
 
-.border-left-list {
+.border-left-green {
     border-left: solid 2px rgb(191, 252, 92);
     padding-left: 13px;
 }
 
-.padding-list {
+.list-top > ul > li:nth-child(2), 
+.list-top > ul > li:nth-child(3), 
+.list-top > h5 {
     padding-left: 15px;
 }
 
@@ -114,14 +106,12 @@ svg {
     width: 80%;
     padding: 15px;
 }
-/* 
-.list-top {
-    display: inline-block;
-} */
+
 .create-playlist {
-    display: inline-block;
     height: 25px;
     margin-bottom: 10px;
+    display: inline-block;
+    padding-left: 15px;
 }
 
 .create-playlist > a > h4 {
@@ -133,7 +123,6 @@ svg {
     width: 25px;
     height: 25px;
     text-align: center;
-    float: left;
     line-height: 25px;
     font-size: 25px;
     color: black;
@@ -153,7 +142,6 @@ svg {
 }
 
 .install-app > i {
-    float: left;
     margin-right: 10px;
 }
 
@@ -171,13 +159,14 @@ svg {
     flex-shrink: 0;
     height: 80px;
     background-color: rgb(8, 11, 17);
-    /* padding: 20px 0; */
 }
 
 .top-button {
     float: right;
+    width: 200px;
     line-height: 40px;
     margin-top: 20px;
+    padding: 0px 10px;
     border-radius: 20px;
     border: solid 1px white;
 }
@@ -190,23 +179,18 @@ svg {
     max-width: calc(100% - 200px);
     height: 100%;
     background-color: rgb(21, 25, 33);
-    float: left;
 }
 
 .album-list {
     overflow: auto;
 }
 
-.navbar-ul > li {
+.navbar > ul > li {
     display: inline-block;
     margin: 0 5px 0 5px;
 }
 
-.navbar-ul > li > h5 {
-    display: inline;
-}
-
-.border-bot-li {
+.border-bot-green {
     width: 30px;
     height: 0;
     border: solid 1px rgb(191, 252, 92);
@@ -219,18 +203,28 @@ svg {
     padding: 15px;
 }
 
+.box {
+    flex-basis: calc(100% / 6);
+    padding: 15px 5px 5px 15px;
+    flex-shrink: 1;
+    position: relative;
+}
+
 .box > img {
     max-width: 100%;
     max-height: 200px;
+    /* position: absolute;
+    top: 15px;
+    left: 15px; */
 }
 
 .album-row > h2 {
     padding-left: 15px;
 }
 
-.box > h3, h2 {
+/* .box > h3, h2 {
     padding: 10px 0;
-}
+} */
 
 .row > h5 {
     padding: 0 0 15px 15px;
@@ -239,22 +233,6 @@ svg {
 .box-container {
     display: flex;
     flex-wrap: wrap;
-
-}
-
-.box-1 {
-    flex-basis: calc(100% / 6);
-    padding: 15px 5px 5px 15px;
-    flex-shrink: 1;
-}
-
-
-.box-2 {
-    max-width: calc(100% / 6);
-    padding: 15px 5px 5px 15px;
-    align-self: flex-start;
-    flex-shrink: 1;
-
 }
 
 .img-round {
@@ -279,12 +257,10 @@ svg {
     display: flex;
     flex-basis: 200px;
     flex-shrink: 2;
-    /* flex-grow: 1; */
-    /* flex-shrink: 1; */
 }
 
 .bottom-bar-center {
-    width: calc(100vw- 400px);
+    width: calc(100vw - 400px);
     height: 100%;
     margin: auto;
     display: flex;
@@ -294,22 +270,12 @@ svg {
 }
 
 
-.bottom-bar-left img {
-    max-width: 40px;
-    float: left;
+.bottom-bar-left > img {
+    width: 40px;
     margin: 20px 10px 20px 10px;
 }
 
-.bottom-bar-left {
-    /* margin-right: 10px; */
-}
-
-.bottom-bar-right {
-    /* margin-left: 10px; */
-}
-
 .box-bot-left-left {
-    float: left;
     margin-top: 25px;
 }
 
@@ -318,7 +284,7 @@ svg {
     margin-top: 30px;
 }
 
-.fa-left-bot {
+.box-bot-left-right > .fa {
     padding-left: 10px;
     vertical-align: middle;
 }
@@ -341,13 +307,15 @@ svg {
     vertical-align: middle;
 }
 
-.minutes {
-    width: 10%;
-    margin-top: -2px;
+.track-progression-box {
+    width: 60%;
+    min-width: 180px;
+    margin: auto;
 }
 
-.minutes-left {
-    float: left;
+.minutes-sides {
+    width: 10%;
+    margin-top: -2px;
 }
 
 .minutes-right {
@@ -356,12 +324,10 @@ svg {
 }
 
 .progression-bar {
-    /* height: 0%; */
     border: solid 1px rgb(40, 40, 40);
     background-color: gray;
     border-radius: 4px;
     display: inline-block;
-    /* flex-shrink: 4; */
 }
 
 .middle-bar {
@@ -369,24 +335,27 @@ svg {
     min-width: 80%;
 }
 
-.play-bar {
-    width: 60%;
-    min-width: 180px;
-    /* flex-basis: 100px; */
-    margin: auto;
-}
-
 .level-bar {
     width: 11%;
-    float: left;
+    background-color: white;
     border: solid 1px white;
     border-radius: 4px;
+    position: relative;
 }
 
+/* .level-bar-circle {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    display: none;
+} */
+
 .bot-box-right-left {
-    /* min-width: 100px; */
     height: 100%;
-    float: left;
     flex-basis: 80px;
     display: flex;
     justify-content: space-between;
@@ -397,12 +366,7 @@ svg {
     margin-left: 5px;
 }
 
-/* .bot-box-right-left > fa {
-    margin-left: px;
-} */
-
 .bot-box-right-right {
-    /* min-width: 100px; */
     height: 100%;
     float: right;
     display: flex;
@@ -410,8 +374,6 @@ svg {
     align-items: center;
     flex-basis: 120px;
     flex-shrink: 1;
-
-
 }
 
 .volume-bar {
@@ -426,22 +388,18 @@ svg {
     width: 30%;
 }
 
-
-
 /* //////////////////// PLAY BAR END //////////////////////// */
                           /*  */
 /* ////////////////// MEDIA QUERY START ///////////////////// */
 
 @media all and (max-width: 992px) {
-
-    .box-1 {
+    .box {
         flex-basis: calc(100% / 4);
     }
 }
 
 @media all and (max-width: 768px) {
-
-    .box-1 {
+    .box {
         flex-basis: calc(100% / 2);
     }
 
@@ -451,15 +409,13 @@ svg {
 
     .bottom-bar-center {
         flex-basis: 50vw;
-    }
-    
+    } 
 }
 
 @media all and (max-width: 480px) {
-
     .logo > img, .list-top > ul > li > a > h5,
-    .list-bot > h5, .create-icon, .create-playlist > h4,
-    .list-bot > ul > li > h5, .install-app > h6,
+    .list-top > h5, .create-icon, .create-playlist > a > h4,
+    .list-bot > ul > li, .install-app > a > h6,
     .install-app > hr, .install-app > h4 {
         display: none;
     }
@@ -477,7 +433,7 @@ svg {
         margin-bottom: 10px;
     }
 
-    .border-left-list {
+    .border-left-green {
         border-left: none;
         /* padding-left: 13px; */
     }
@@ -499,10 +455,27 @@ svg {
     }
 }
 
-
-
 /* ////////////////// MEDIA QUERY END /////////////////////// */
+                          /*  */
+/* ///////////////////// HOVER START //////////////////////// */
 
+.hover-white:hover {
+    color: white;
+}
 
+.install-a:hover {
+    text-decoration: underline;
+}
 
+.top-button:hover {
+    width: 250px;
+    line-height: 50px;
+    margin-top: 15px;
+    padding: 0px 15px;
+    border-radius: 25px;
+}
 
+.box > img:hover {
+    background-color: black;
+    z-index: 2;
+}
