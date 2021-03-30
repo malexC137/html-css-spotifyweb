@@ -85,6 +85,7 @@ li {
 svg {
     width: 20px;
     height: 20px;
+    opacity: 0.5;
 }
 
 .list-top > ul > li > a > h5 {
@@ -149,6 +150,7 @@ svg {
     background-color: gray;
     border-radius: 50%;
     margin-right: 10px;
+    opacity: 1;
 }
 
 /* //////////////// PLAYLIST COLUMN END ///////////////////// */
@@ -213,18 +215,42 @@ svg {
 .box > img {
     max-width: 100%;
     max-height: 200px;
-    /* position: absolute;
-    top: 15px;
-    left: 15px; */
+}
+
+.box-img > img {
+    max-width: 100%;
+    max-height: 200px;
+
+}
+
+.box-img {
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    display: flex;
+}
+
+.img-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.2;
+    display: none;
+}
+
+.box-img > i {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 .album-row > h2 {
     padding-left: 15px;
 }
-
-/* .box > h3, h2 {
-    padding: 10px 0;
-} */
 
 .row > h5 {
     padding: 0 0 15px 15px;
@@ -269,7 +295,6 @@ svg {
     flex-shrink: 2;
 }
 
-
 .bottom-bar-left > img {
     width: 40px;
     margin: 20px 10px 20px 10px;
@@ -296,21 +321,37 @@ svg {
     min-width: 180px;
     flex-basis: 100px;
     margin: auto;
+    position: relative;
 }
 
 .fa-play-circle-o {
-    font-size: 30px;
+    font-size: 35px;
+    position: absolute;
+    left: 75px;
+    top: 5px;
 }
 
 .play-buttons > .fa {
     margin: 0 8px 0 8px;
     vertical-align: middle;
+    display: inline-block;
+}
+
+.fa-random, .fa-step-backward, .fa-step-forward, .fa-repeat {
+    position: relative;
+    top: 0px;
+    padding: 10px 5px 15px 5px;
+}
+
+.play-buttons > .fa-step-backward {
+    margin-right: 40px;
 }
 
 .track-progression-box {
     width: 60%;
     min-width: 180px;
     margin: auto;
+    padding-bottom: 5px;
 }
 
 .minutes-sides {
@@ -324,7 +365,7 @@ svg {
 }
 
 .progression-bar {
-    border: solid 1px rgb(40, 40, 40);
+    border: solid 2px rgb(40, 40, 40);
     background-color: gray;
     border-radius: 4px;
     display: inline-block;
@@ -338,12 +379,12 @@ svg {
 .level-bar {
     width: 11%;
     background-color: white;
-    border: solid 1px white;
+    border: solid 2px white;
     border-radius: 4px;
     position: relative;
 }
 
-/* .level-bar-circle {
+.level-bar-circle {
     width: 10px;
     height: 10px;
     background-color: white;
@@ -352,7 +393,7 @@ svg {
     bottom: -5px;
     border-radius: 50%;
     display: none;
-} */
+}
 
 .bot-box-right-left {
     height: 100%;
@@ -463,8 +504,12 @@ svg {
     color: white;
 }
 
-.install-a:hover {
-    text-decoration: underline;
+.my-a:hover > svg {
+    opacity: 2;
+}
+
+.my-a:hover > .create-icon {
+    background-color: white;
 }
 
 .top-button:hover {
@@ -478,4 +523,38 @@ svg {
 .box > img:hover {
     background-color: black;
     z-index: 2;
+}
+
+.box-img:hover > i {
+    display: block;
+}
+
+.box-bot-left-left > a > h6:hover {
+    text-decoration: underline;
+}
+
+.box-img:hover .img-hover {
+    display: block;
+}
+
+.box-bot-left-right > i:hover {
+    color: white;
+}
+
+.play-buttons > .fa-play-circle-o:hover {
+    font-size: 40px;
+}
+
+.play-buttons > .fa-random:hover {
+    position: static;
+    top: 0px;
+}
+
+.level-bar:hover > .level-bar-circle {
+    display: block;
+}
+
+.level-bar:hover {
+    background-color: rgb(191, 252, 92);
+    border: solid 2px rgb(191, 252, 92);
 }
