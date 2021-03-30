@@ -484,14 +484,13 @@ svg {
 
     .border-left-green {
         border-left: none;
-        /* padding-left: 13px; */
     }
 
     .install-app {
         height: 60px;
     }
 
-    .install-app > i {
+    .install-app > a > i {
         padding: 0 0 10px 3px;
     }
 
